@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Panel</title>
+  <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+
+<h1>Panel de usuario</h1>
+<h2>Bienvenido <span th:text="${usuario}"></span></h2>
+
+<div class="menu">
+  <button>Realizar Tutoría</button>
+  <button>Solicitar Tutoría</button>
+  <button>Tutorías Realizadas</button>
+  <button>Documentación</button>
+</div>
+
+<a href="/">Cerrar sesión</a>
+
+</body>
+</html>

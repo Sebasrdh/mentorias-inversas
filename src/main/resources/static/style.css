@@ -1,0 +1,36 @@
+body {
+    font-family: Arial;
+    background-color: #1e1e1e;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    background-color: #2c2c2c;
+    width: 300px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 8px;
+}
+
+button {
+    padding: 10px;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.menu button {
+    display: block;
+    width: 200px;
+    margin: 10px auto;
+}
