@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Panel de usuario</title>
+  <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+
+<div class="container-dashboard">
+
+  <div class="dashboard-header">
+    <div class="title-section">
+      <h1>Panel de usuario</h1>
+      <h2>¡Bienvenido! <span th:text="${usuario}">@Usuario</span></h2>
+    </div>
+
+    <div class="config-dropdown-container">
+      <button class="config-btn" onclick="toggleConfigMenu()">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="#111"><path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.06-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.73,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.06,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.43-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.49-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/></svg>
+        Configuración
+      </button>
+
+      <div id="configMenu" class="dropdown-content">
+        <a href="#">Mi cuenta</a>
+        <a href="#">Preferencias</a>
+        <a href="/" class="logout-link">Cerrar sesión</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="dashboard-content">
+
+    <div class="dashboard-left">
+      <button class="menu-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+        Realizar Tutoría
+      </button>
+      <button class="menu-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+        Solicitar Tutoría
+      </button>
+      <button class="menu-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+        Tutorías realizadas
+      </button>
+      <button class="menu-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+        Documentación
+      </button>
+
+    </div>
+
+    <div class="dashboard-center">
+      <img th:src="@{/img/videocall.png}" alt="Videollamada de Tutoría" class="main-illustration">
+
+      <div class="interest-box">
+        <p>Tutorías de interés:</p>
+        <ul>
+          <li>Tecnología</li>
+          <li>Redes sociales</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="dashboard-right">
+      <img th:src="@{/img/homepage.png}" alt="Logo Mentoría Inversa" class="dashboard-logo">
+
+      <button class="soporte-btn-dash">
+        Soporte
+        <img th:src="@{/img/gear.png}" alt="Soporte" class="support-icon">
+      </button>
+    </div>
+
+  </div>
+</div>
+<script>
+  function toggleConfigMenu() {
+    document.getElementById("configMenu").classList.toggle("show");
+  }
+
+  window.onclick = function(event) {
+    if (!event.target.matches('.config-btn') && !event.target.closest('.config-btn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      for (var i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+</script>
+</body>
+</html>

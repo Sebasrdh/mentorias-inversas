@@ -1,3 +1,4 @@
+/* Login */
 body {
     background-color: #c8c7c7;
     margin: 0;
@@ -5,13 +6,14 @@ body {
 }
 
 .container-login {
-    background-color: #c8c7c7;
-    margin: 0;
-    border-radius: 20px;
+    background-color: #ffffff;
+    margin: 20px;
+    border-radius: 30px;
     display: flex;
-    height: 100vh;
-    width: 100%;
+    height: calc(100vh - 40px);
+    width: calc(100% - 40px);
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .login-left {
@@ -64,6 +66,11 @@ body {
     font-size: 18px;
 }
 
+.register-text a {
+    color: #5bc2cf;
+    text-decoration: none;
+    font-weight: bold;
+}
 .google-btn {
     position: relative;
     display: flex;
@@ -72,7 +79,7 @@ body {
     width: 40%;
     height: 55px;
     border-radius: 10px;
-    border: none;
+    border: 2px solid #111111;
     background: #4a7bdc;
     color: white;
     font-size: 18px;
@@ -158,4 +165,302 @@ body {
     font-weight: bold;
     font-size: 14px;
     color: #111;
+}
+
+/* Register */
+
+.container-register {
+    background-color: #ffffff;
+    margin: 20px;
+    border-radius: 30px;
+    display: flex;
+    height: calc(100vh - 40px);
+    width: calc(100% - 40px);
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.register-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.register-logo {
+    width: 80%;
+    max-width: 450px;
+}
+
+.register-slogan {
+    font-size: 26px;
+    color: #3b232d;
+    font-weight: 800;
+    margin-top: 20px;
+    line-height: 1.3;
+}
+
+.register-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+}
+
+.register-title {
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: #111;
+}
+
+.gmail-outline-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    height: 55px;
+    border-radius: 10px;
+    border: 1px solid #777;
+    background-color: #ffffff;
+    color: #111;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.gmail-outline-btn img {
+    width: 25px;
+    margin-right: 15px;
+}
+
+.gmail-outline-btn:hover {
+    background-color: #f5f5f5;
+}
+
+.login-link-text {
+    margin-top: 40px;
+    font-size: 14px;
+    width: 75%;
+    text-align: center;
+    color: #555;
+}
+
+.login-link-text a {
+    color: #5bc2cf;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Homepage */
+
+.container-dashboard {
+    background-color: #ffffff;
+    margin: 20px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column; /* Apila cabecera y contenido */
+    height: calc(100vh - 40px);
+    width: calc(100% - 40px);
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 20px 40px;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.title-section {
+    width: 100%;
+    text-align: center;
+}
+
+.title-section h1 {
+    font-size: 50px;
+    color: #1a1523;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.title-section h2 {
+    font-size: 24px;
+    color: #111;
+    margin: 5px 0 0 0;
+    font-weight: normal;
+}
+
+.config-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.dashboard-content {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    padding-top: 20px;
+}
+
+.dashboard-left {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+
+.menu-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #834381;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 18px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.menu-btn:hover {
+    background-color: #6a3568;
+}
+
+.dashboard-center {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.main-illustration {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+}
+
+.interest-box {
+    background-color: #d8d8d8;
+    width: 80%;
+    padding: 20px;
+    border-radius: 15px;
+    color: #111;
+}
+
+.interest-box p {
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.interest-box ul {
+    margin: 0;
+    padding-left: 25px;
+}
+
+.interest-box li {
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.dashboard-right {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.dashboard-logo {
+    width: 100%;
+    max-width: 320px;
+    margin-top: 20px;
+}
+
+.soporte-btn-dash {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #8b2c2c;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 80%;
+}
+
+.config-dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    z-index: 1000;
+    overflow: hidden;
+    border: 1px solid #d3d3d3;
+    margin-top: 10px;
+}
+
+.dropdown-content.show {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-content a {
+    color: #111;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    transition: background-color 0.2s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-content .logout-link {
+    color: #8b2c2c;
+    font-weight: bold;
+    border-top: 1px solid #eee;
+}
+
+.dropdown-content .logout-link:hover {
+    background-color: #ffeaea;
 }

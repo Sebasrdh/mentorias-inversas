@@ -19,10 +19,10 @@ public class HomeController {
         return "register";
     }
 
-    @GetMapping("/dashboard")
-    public String dashboard(Model model) {
+    @GetMapping("/homepage")
+    public String homepage(Model model) {
         model.addAttribute("usuario", "Usuario");
-        return "dashboard";
+        return "homepage";
     }
 
     @PostMapping("/login")
@@ -31,7 +31,7 @@ public class HomeController {
                           Model model) {
 
         model.addAttribute("usuario", usuario);
-        return "dashboard";
+        return "redirect:/homepage";
     }
 
     @PostMapping("/register")
