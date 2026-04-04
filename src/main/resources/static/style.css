@@ -148,19 +148,20 @@ body {
 }
 
 .soporte {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+    position: absolute;
+    top: 40px;
+    right: 50px;
     background-color: #8b2c2c;
     color: white;
     border: none;
-    padding: 12px 20px;
+    padding: 15px 30px;
     border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
+    font-weight: bold;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     z-index: 1000;
 }
 
@@ -395,6 +396,7 @@ body {
 .config-dropdown-container {
     position: relative;
     display: inline-block;
+    align-self: flex-end;
 }
 
 .dropdown-content {
