@@ -18,19 +18,17 @@
         <form action="/register" method="post">
             <div class="input-with-icon">
                 <svg class="field-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 6C13.66 6 15 7.34 15 9C15 10.66 13.66 12 12 12C10.34 12 9 10.66 9 9C9 7.34 10.34 6 12 6ZM12 20.2C9.5 20.2 7.29 18.92 6 16.98C6.03 14.99 10 13.9 12 13.9C13.99 13.9 17.97 14.99 18 16.98C16.71 18.92 14.5 20.2 12 20.2Z" fill="#111"></path></svg>
-                <input type="text" name="usuario" placeholder="Usuario" class="login-input">
+                <input type="text" name="nombreCompleto" placeholder="Nombre y Apellido" class="login-input" required>
             </div>
 
             <div class="input-with-icon">
-                <svg class="field-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"></path>
-                </svg>
-                <input type="email" name="correo" placeholder="Correo electrónico" class="login-input">
+                <svg class="field-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"></path></svg>
+                <input type="email" name="correo" placeholder="Correo electrónico" class="login-input" required>
             </div>
 
             <div class="input-with-icon">
                 <svg class="field-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 10.5V6C18 2.69 15.31 0 12 0C8.69 0 6 2.69 6 6V10.5C4.34 10.5 3 11.84 3 13.5V21C3 22.66 4.34 24 6 24H18C19.66 24 21 22.66 21 21V13.5C21 11.84 19.66 10.5 18 10.5ZM8 6C8 3.79 9.79 2 12 2C14.21 2 16 3.79 16 6V10.5H8V6ZM18 22H6C5.45 22 5 21.55 5 21V13.5C5 12.95 5.45 12.5 6 12.5H18C18.55 12.5 19 12.95 19 13.5V21C19 21.55 18.55 22 18 22Z" fill="#111"></path></svg>
-                <input type="password" name="password" placeholder="Contraseña" class="login-input">
+                <input type="password" name="password" placeholder="Contraseña" class="login-input" required>
             </div>
 
             <button type="submit" class="btn-login">Crear cuenta</button>

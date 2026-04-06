@@ -10,14 +10,20 @@
   <div class="dashboard-content">
 
     <div class="dashboard-left">
-      <button class="menu-btn">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
-        Realizar Tutoría
-      </button>
-      <button class="menu-btn">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
-        Solicitar Tutoría
-      </button>
+      <form action="/accion-tutoria" method="post" style="width: 100%;">
+        <input type="hidden" name="tipoAccion" value="ENSENAR">
+        <button type="submit" class="menu-btn" style="width: 100%;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+          Realizar Tutoría
+        </button>
+      </form>
+      <form action="/accion-tutoria" method="post" style="width: 100%;">
+        <input type="hidden" name="tipoAccion" value="APRENDER">
+        <button type="submit" class="menu-btn" style="width: 100%;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+          Solicitar Tutoría
+        </button>
+      </form>
       <button class="menu-btn">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
         Tutorías realizadas
