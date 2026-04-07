@@ -62,6 +62,10 @@ public class HomeController {
         System.out.println("Acción: " + rolDinamico.ejecutarAccion());
         System.out.println("=========================================");
 
+        // Servicio para notificar a los observadores (Ej. NotificadorEmail)
+        usuarioService.notificarAccionTutoria(rolDinamico.getNombreRol(), rolDinamico.ejecutarAccion());
+        System.out.println("=========================================");
+
         return "redirect:/homepage";
     }
 }
