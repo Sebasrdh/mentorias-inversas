@@ -51,21 +51,11 @@ public class HomeController {
         return "redirect:/";
     }
 
+    // HomeController.java - Alta cohesión: El controlador solo delega
     @PostMapping("/accion-tutoria")
     public String procesarAccionTutoria(@RequestParam("tipoAccion") String tipoAccion, Model model) {
-
-        // Si envía "ENSENAR" crea RolMentor, si envía "APRENDER" crea RolAprendiz
-        Rol rolDinamico = RolFactory.asignarRolPorAccion(tipoAccion);
-
-        System.out.println("=========================================");
-        System.out.println("Rol asignado dinámicamente: " + rolDinamico.getNombreRol());
-        System.out.println("Acción: " + rolDinamico.ejecutarAccion());
-        System.out.println("=========================================");
-
-        // Servicio para notificar a los observadores (Ej. NotificadorEmail)
-        usuarioService.notificarAccionTutoria(rolDinamico.getNombreRol(), rolDinamico.ejecutarAccion());
-        System.out.println("=========================================");
-
+        //Se delega el procesamiento al servicio.
+        usuarioService.ejecutarYNotificarAccion(tipoAccion);
         return "redirect:/homepage";
     }
 }
