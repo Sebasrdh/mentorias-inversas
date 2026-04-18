@@ -3,6 +3,7 @@ package com.mentorias.mentorias.controller;
 import com.mentorias.mentorias.factory.RolFactory;
 import com.mentorias.mentorias.model.Rol;
 import com.mentorias.mentorias.service.UsuarioService;
+import com.mentorias.mentorias.adapter.ProveedorAutenticacion; // <-- Nuevo import
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +16,9 @@ public class HomeController {
 
     @Autowired
     private UsuarioService usuarioService;
+
+    @Autowired
+    private ProveedorAutenticacion proveedorAuth;
 
     @GetMapping("/")
     public String login() {
@@ -36,8 +40,15 @@ public class HomeController {
     public String doLogin(@RequestParam String correo,
                           @RequestParam String password,
                           Model model) {
-        model.addAttribute("usuario", correo);
-        return "redirect:/homepage";
+
+        boolean esAutentico = proveedorAuth.autenticar(correo, password);
+
+        if (esAutentico) {
+            model.addAttribute("usuario", correo);
+            return "redirect:/homepage";
+        }
+
+        return "redirect:/?error=true";
     }
 
     @PostMapping("/register")
